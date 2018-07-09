@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+  <title>Contact Form Example</title>
+    <script data-cfasync="false" type="text/javascript"
+  src="google-apps-script.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"> 
+</head>
+
+<body>
+  <h1 class="content-head is-center">Contact Us!</h1>
+  <!--<aside>-->
+  <!--     <p>-->
+  <!--         We would <em>love</em> to hear from you! </p>-->
+  <!--         <p>Please use the <b><em>Contact Form</em></b>-->
+  <!--         to send us a message.-->
+  <!--     </p>-->
+  <!-- </aside>-->
+
+<!-- START HERE -->
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <!-- Style The Contact Form How Ever You Prefer -->
+   <link rel="stylesheet" href="style.css">
+
+  <form id="gform" method="POST" class="pure-form pure-form-aligned" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbyExIWIRGfuIbmsPnSuT8XZ6RBQgDyLm3_rnzBefbjc1QQQnwGE/exec">
+    <!-- change the form action to your script url -->
+
+    <!--<fieldset class="pure-group">-->
+    <!--  <label for="name">Name: </label>-->
+    <!--  <input id="name" name="name" placeholder="What your Mom calls you" />-->
+    <!--</fieldset>-->
+
+    <!--<fieldset class="pure-group">-->
+    <!--  <label for="message">Message: </label>-->
+    <!--  <textarea id="message" name="message" rows="10"-->
+    <!--  placeholder="Tell us what's on your mind..."></textarea>-->
+    <!--</fieldset>-->
+
+    <!--<fieldset class="pure-group">-->
+    <!--  <label for="email"><em>Your</em> Email Address:</label>-->
+    <!--  <input id="email" name="email" type="email" value=""-->
+    <!--  required placeholder="your.name@email.com"/>-->
+    <!--  <span id="email-invalid" style="display:none">-->
+    <!--    Must be a valid email address</span>-->
+    <!--</fieldset>-->
+
+    <!--<fieldset class="pure-group">-->
+    <!--  <label for="color">Favourite Color: </label>-->
+    <!--  <input id="color" name="color" placeholder="green" />-->
+    <!--</fieldset>-->
+    <div class="center">
+    
+    <fieldset class="pure-group blue">
+      <label for="name">Name:</label>
+      <input id="name" name="name" required placeholder="Please Enter Your Name"/>
+      <label for="band-name">Band Name:</label>
+      <input id="band-name" name="band-name" placeholder="What is the band's name?" />
+      <label for="music">Link to your Music: </label>
+      <input id="music" name="music" placeholder="Bandcamp / Soundcloud / Youtube / etc" />
+      <label for="location">Location: </label>
+      <input id="location" name="location" placeholder="Where is the band located" />
+      <label for="email"><em>Your</em> Email Address:</label>
+      <input id="email" name="email" type="email" value=""
+      required placeholder="youremail@email.com"/>
+      <span id="email-invalid" style="display:none">
+        Must be a valid email address</span>
+  
+    
+    <!--<fieldset>-->
+    <!--    <input type="checkbox" name="eighteen" value="18"> Everyone playing is 18+<br>-->
+    <!--    <input type="checkbox" name="twentyone" value="21"> Some members are 21+<br>-->
+    <!--    <input type="checkbox" name="promoter" value="promoter"> I am a promoter<br>-->
+    <!--    <input type="checkbox" name="playing" value="playing"> I am playing in one of the bands<br>-->
+    <!--    <input type="checkbox" name="touring" value="touring"> I represent the touring band<br>-->
+    <!--    <input type="checkbox" name="other" value="other"> Other type of booking request<br>-->
+    <!--</fieldset>-->
+    
+    <!--    <fieldset>-->
+    <!--       <input id="checkboxes--eighteen" type="checkbox" name="eighteen"  /> Everyone playing is 18+ <br>-->
+    <!--      <input id="checkboxes--twentyone" type="checkbox" name="twentyone"  /> Some members are 21+ <br>-->
+    <!--      <input id="checkboxes--promoter" type="checkbox" name="promoter"  /> I am just booking the show <br>-->
+    <!--      <input id="checkboxes--playing" type="checkbox" name="playing"  /> I am playing in one of the bands <br>-->
+    <!--       <input id="checkboxes--touring" type="checkbox" name="touring" /> I represent the touring band <br>-->
+    <!--      <input id="checkboxes--other" type="textarea" name="other" /> Other type of booking request <br>-->
+    <!--</fieldset>-->
+      
+      <label for="age">Age</label>
+      <select id="age" name="age" required>
+        <option selected>Everyone in the band is 18+</option>
+        <option>Everyone is atleast 18, with some people over 21</option>
+        <option>Everyone is 21+ in the band</option>
+        </select>
+   
+    
+   
+      <label for="why">What brings you here</label>
+      <select id="why" name="why">
+        <option selected>Im playing in the local group</option>
+        <option>Im playing in the touring group</option>
+        <option>Im just booking the event</option>
+        <option>Other</option>
+      </select>
+      <label for="text-area"><em>If Other:</em> </label>
+      <textarea id="message" name="message" rows="5" placeholder="Or any notes, info, ideas, comments..."></textarea>
+    
+      
+    <button class="button-success pure-button button-xlarge left">
+      <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+  </div>
+  </fieldset>
+  </form>
+  
+  
+
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript"
+  src="form-submission-handler.js"></script>
+<!-- END -->
+
+</body>
+</html>
