@@ -5,14 +5,14 @@ body {
 
 .wrapper {
   border-top-width:.2em;
-  border-bottom-width:0em;
-  border-left-width:0em;
-  border-right-width:0em;
+  border-bottom-width:.2em;
+  border-left-width:.2em;
+  border-right-width:.2em;
   border-style:solid;
-  border-radius:1em;
+  border-radius:100%;
   border-color:#4bdf1e;
-  padding-top:3em;
-  padding-bottom:0;
+  padding-top:;
+  padding-bottom:.2em;
 }
 aside {
     background: #4bdf1e; /* same color as selected state on site menu */
