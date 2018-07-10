@@ -2,6 +2,18 @@ body {
   /*margin: 2em;*/
   background-color:#000;
 }
+
+.wrapper {
+  border-top-width:.2em;
+  border-bottom-width:0em;
+  border-left-width:0em;
+  border-right-width:0em;
+  border-style:solid;
+  border-radius:1em;
+  border-color:#4bdf1e;
+  padding-top:3em;
+  padding-bottom:0;
+}
 aside {
     background: #4bdf1e; /* same color as selected state on site menu */
     /*padding: 0.3em 1em;*/
@@ -21,7 +33,7 @@ textarea {
   /*margin: 2em 0 1em;*/
   color: #4bdf1e;
   font-family: Orbitron;
-  font-size:2em;
+  font-size:1.3em;
 }
 .is-center {
   text-align: center;
@@ -58,13 +70,13 @@ input, textarea, select {
   font-size: .8em;
   width: 50%;
   margin: 0 auto;
-  border-style:solid;
-  border-width:.2em;
-  border-radius:1em;
-  border-color:#4bdf1e;
-  padding:.3em;
-  padding-bottom:0;
-}
+/*  border-style:solid;*/
+/*  border-width:.2em;*/
+/*  border-radius:1em;*/
+/*  border-color:#4bdf1e;*/
+/*  padding:.3em;*/
+/*  padding-bottom:0;*/
+/*}*/
 
 label {
   font-size: 1em;
